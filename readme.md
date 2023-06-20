@@ -88,3 +88,46 @@ git fetch
 git pull
 ```
 
+19/06
+Primeiro precisamos usar o código abaixo para ver se há alguma chave ssh.
+```bash
+ls -al ~/.ssh
+```
+e logo depos usar este código mais o email que uso para criar uma chave.
+```bash
+ssh-keygen -t ed25519 -C "your_email@example.com"
+```
+
+Depois tive que usar esses dois códigos para iniciar um agente e adicionar a chave ssh no agente.
+```bash
+eval "$(ssh-agent -s)"
+```
+```bash
+ssh-add ~/.ssh/id_ed25519
+```
+
+Também usamos esse código para copiar a chave ssh.
+```bash
+clip < ~/.ssh/id_ed25519.pub
+```
+
+Então decidimos adicionar a chave ao GitHub com a chave que acabamos de copiar,para adicionar precisamos ir as configurações e ir em SSG and GPG keys e conseguimos colar lá.
+
+Também testamos a conexão com este código, e acaba pedindo se temos certeza , logo digitamos yes.
+```bash
+ssh -T git@github.com
+```
+
+
+Logo depois abrimos o vs code com o git bash, e usamos o código abaixo para abrir as pastas ou arquivos que estam na pasta "notas".
+```bash
+ssh -T git@github.com
+```
+
+
+E usando com o código abaixo usamos para fazer nosso primeiro commit, com o nome do commit em "description" no exemplo.
+```bash
+git commit -m "<description>"
+```
+
+Depois conseguimos logar no GitHub e publicamos o commit.
