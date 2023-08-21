@@ -131,3 +131,40 @@ git commit -m "<description>"
 ```
 
 Depois conseguimos logar no GitHub e publicamos o commit.
+---------------------------------------------------------------------------------------------------------------------------
+21/08/23
+
+Nestas últimas duas aulas aprendemos como o GitHub fornece suporte para sites estáticos gratuitamente.  
+Primeiro acessamos o repositório e acessamos os settings, e logo após entramos em pages, selecionamos a branch para publicação e salvamos.
+
+Baixamos o repositório e utilizamos o ssh com o comando: 
+```bash
+git clone (aqui o SSH)
+```
+
+Inicialimos o projeto react com este comando:
+```bash
+npx create-react-app
+```
+
+Também adicionamos o arquivo index.html ao projeto
+
+Logo em seguida commitamos a página
+
+
+
+
+```bash
+```
+
+```bash
+```
+
+```bash
+```
+
+```bash
+```
+
+```bash
+```
